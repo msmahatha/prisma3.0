@@ -21,3 +21,5 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 Builders.zip
+.vercel
+.env*.local
