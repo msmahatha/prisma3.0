@@ -42,5 +42,5 @@
         "SESSION_DRIVER": "array",
         "QUEUE_CONNECTION": "sync"
     },
-    "buildCommand": "npm install && npm run build"
+    "buildCommand": "npm install && npm run build && rm -rf node_modules"
 }
