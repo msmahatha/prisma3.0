@@ -1,0 +1,11 @@
+node_modules
+tests
+database
+storage
+resources/js
+resources/css
+.env
+.env.local
+.env.backup
+.git
+Builders.zip
