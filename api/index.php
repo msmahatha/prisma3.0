@@ -25,8 +25,18 @@ use Illuminate\Http\Request;
 define('LARAVEL_START', microtime(true));
 
 require __DIR__.'/../vendor/autoload.php';
-$app = require_once __DIR__.'/../bootstrap/app.php';
 
-$app->useStoragePath($storagePath);
-
-$app->handleRequest(Request::capture());
+try {
+    $app = require_once __DIR__.'/../bootstrap/app.php';
+    $app->useStoragePath($storagePath);
+    $app->handleRequest(Request::capture());
+} catch (\Throwable $e) {
+    echo "<h1>Real Exception:</h1>";
+    echo "<pre>";
+    echo "Message: " . $e->getMessage() . "\n";
+    echo "File: " . $e->getFile() . "\n";
+    echo "Line: " . $e->getLine() . "\n";
+    echo "Trace: " . $e->getTraceAsString() . "\n";
+    echo "</pre>";
+    exit(1);
+}
