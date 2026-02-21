@@ -5,8 +5,7 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "maxDuration": 30,
-            "excludeFiles": "{node_modules/**,.git/**,tests/**,database/**,storage/**,resources/js/**,resources/css/**,public/images/**}"
+            "maxDuration": 30
         }
     },
     "routes": [
@@ -41,6 +40,5 @@
         "CACHE_STORE": "array",
         "SESSION_DRIVER": "array",
         "QUEUE_CONNECTION": "sync"
-    },
-    "buildCommand": "npm install && npm run build && rm -rf node_modules"
+    }
 }
