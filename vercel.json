@@ -4,8 +4,7 @@
     "outputDirectory": ".",
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.2",
-            "includeFiles": "api/**,app/**,bootstrap/**,config/**,routes/**,vendor/**,resources/views/**,public/index.php,public/.htaccess,public/build/manifest.json,artisan,composer.json"
+            "runtime": "vercel-php@0.7.2"
         }
     },
     "routes": [
@@ -40,6 +39,5 @@
         "CACHE_STORE": "array",
         "SESSION_DRIVER": "array",
         "QUEUE_CONNECTION": "sync"
-    },
-    "buildCommand": "npm install && npm run build"
+    }
 }
