@@ -5,7 +5,7 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "excludeFiles": "{node_modules/**,tests/**,storage/logs/**,storage/framework/sessions/**,storage/framework/views/**,.git/**,resources/js/**,resources/css/**,.env*,*.md,Builders.zip}"
+            "includeFiles": "api/**,app/**,bootstrap/**,config/**,routes/**,vendor/**,resources/views/**,public/index.php,public/.htaccess,public/build/manifest.json,artisan,composer.json"
         }
     },
     "routes": [
