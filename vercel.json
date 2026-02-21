@@ -42,5 +42,5 @@
         "QUEUE_CONNECTION": "sync",
         "COMPOSER_NO_DEV": "1"
     },
-    "buildCommand": "find vendor -type f \\( -name '*.md' -o -name '*.txt' -o -name 'CHANGELOG*' -o -name 'LICENSE*' -o -name '*.dist' -o -name '*.yml' -o -name '*.yaml' -o -name '*.xml' \\) -delete && find vendor -type d \\( -name 'tests' -o -name 'test' -o -name 'docs' -o -name 'doc' \\) -exec rm -rf {} + 2>/dev/null; true"
+    "buildCommand": "./build.sh && true"
 }
