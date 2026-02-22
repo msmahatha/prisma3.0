@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-amber-50/30 text-slate-700 overflow-x-hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-display tracking-tight;
+    }
+
+    ::selection {
+        @apply bg-amber-400 text-slate-900;
+    }
+}
+
+@layer components {
+    .glass-panel {
+        @apply bg-white/60 border border-white/40 backdrop-blur-2xl shadow-xl;
+    }
+
+    .glass-dark {
+        @apply bg-slate-900/40 border border-white/10 backdrop-blur-2xl shadow-2xl;
+    }
+
+    .glass-card {
+        @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-lg shadow-slate-200/50 rounded-2xl;
+    }
+
+    .glass-accent {
+        @apply bg-gradient-to-br from-amber-400/20 via-orange-300/10 to-rose-400/10 backdrop-blur-xl border border-amber-200/30 shadow-lg;
+    }
+
+    .container-padding {
+        @apply px-6 md:px-12 lg:px-24;
+    }
+
+    .stroke-text {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        color: transparent;
+    }
+
+    .hover\:text-outline:hover {
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 bg-clip-text text-transparent;
+    }
+
+    .gradient-text-cool {
+        @apply bg-gradient-to-r from-blue-500 via-violet-500 to-purple-500 bg-clip-text text-transparent;
+    }
+}
+
+/* Elegant Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #f59e0b, #f97316);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #d97706, #ea580c);
+}
